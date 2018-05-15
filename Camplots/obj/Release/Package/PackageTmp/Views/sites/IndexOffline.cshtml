@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Camplots.Models.sites>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <ul class="errorMessages text-danger"></ul>
+    </div>
+</div>
+
+<h2>Displays a list of sites and locations from local storage in the browser</h2>
+<p>
+    <button id="getList">Get list</button>
+</p>
+
+<p>
+    @*@Html.ActionLink("Create New", "Create")*@
+    <a href=@Url.Action("Edit","sites") id="createNew">Create new</a>
+</p>
+<table class="table" id="sitesTable">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CAMPLOT_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LOCATION)
+        </th>
+        <th></th>
+    </tr>
+
+</table>
+
+<div>
+    @Html.ActionLink("Back to menu", "Menu")
+</div>
+
+<a href=@Url.Action("","sites") id="sitesControllerHref"></a>
+
+
+@section scripts {
+    <script type="text/javascript" src="~/Scripts/App/sitesIndex.js"></script>
+    }

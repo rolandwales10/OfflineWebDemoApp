@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ParksAndLandsModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="inspections">
+      <EntityTypeMapping TypeName="ParksAndLandsModel.inspections">
+        <MappingFragment StoreEntitySet="inspections">
+          <ScalarProperty Name="camplot_ID" ColumnName="camplot ID" />
+          <ScalarProperty Name="INSPECTN_DATE" ColumnName="INSPECTN DATE" />
+          <ScalarProperty Name="INSPECTORS" ColumnName="INSPECTORS" />
+          <ScalarProperty Name="NextDate" ColumnName="NextDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="latLon">
+      <EntityTypeMapping TypeName="ParksAndLandsModel.latLon">
+        <MappingFragment StoreEntitySet="latLon">
+          <ScalarProperty Name="MI_PRINX" ColumnName="MI_PRINX" />
+          <ScalarProperty Name="Camplot_ID" ColumnName="Camplot_ID" />
+          <ScalarProperty Name="LATITUDE" ColumnName="LATITUDE" />
+          <ScalarProperty Name="LONGITUDE" ColumnName="LONGITUDE" />
+          <ScalarProperty Name="MIDAS" ColumnName="MIDAS" />
+          <ScalarProperty Name="LOTNOS" ColumnName="LOTNOS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mapinfo_prinx">
+      <EntityTypeMapping TypeName="ParksAndLandsModel.mapinfo_prinx">
+        <MappingFragment StoreEntitySet="mapinfo_prinx">
+          <ScalarProperty Name="CAMPLOT_ID" ColumnName="CAMPLOT_ID" />
+          <ScalarProperty Name="MI_PRINX" ColumnName="MI_PRINX" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="owners">
+      <EntityTypeMapping TypeName="ParksAndLandsModel.owners">
+        <MappingFragment StoreEntitySet="owners">
+          <ScalarProperty Name="Camplot_ID" ColumnName="Camplot ID" />
+          <ScalarProperty Name="VEND_CUST_CD" ColumnName="VEND_CUST_CD" />
+          <ScalarProperty Name="FSNAME" ColumnName="FSNAME" />
+          <ScalarProperty Name="LNAME" ColumnName="LNAME" />
+          <ScalarProperty Name="CONAME" ColumnName="CONAME" />
+          <ScalarProperty Name="AddName" ColumnName="AddName" />
+          <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+          <ScalarProperty Name="TOWN" ColumnName="TOWN" />
+          <ScalarProperty Name="STATE" ColumnName="STATE" />
+          <ScalarProperty Name="ZIP" ColumnName="ZIP" />
+          <ScalarProperty Name="HOME_PHONE" ColumnName="HOME PHONE" />
+          <ScalarProperty Name="CELL_PHONE" ColumnName="CELL PHONE" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="TRANSFER_DATE" ColumnName="TRANSFER DATE" />
+          <ScalarProperty Name="FORMER_OWNER_NOTES" ColumnName="FORMER OWNER/NOTES" />
+          <ScalarProperty Name="Seboeis_Dam_Mailing" ColumnName="Seboeis Dam Mailing" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="plumbingInspectors">
+      <EntityTypeMapping TypeName="ParksAndLandsModel.plumbingInspectors">
+        <MappingFragment StoreEntitySet="plumbingInspectors">
+          <ScalarProperty Name="contactId" ColumnName="contactId" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="zip" ColumnName="zip" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="addlPhone" ColumnName="addlPhone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rents">
+      <EntityTypeMapping TypeName="ParksAndLandsModel.rents">
+        <MappingFragment StoreEntitySet="rents">
+          <ScalarProperty Name="Camplot_ID" ColumnName="Camplot ID" />
+          <ScalarProperty Name="FEEYear" ColumnName="FEEYear" />
+          <ScalarProperty Name="FEE" ColumnName="FEE" />
+          <ScalarProperty Name="Paid" ColumnName="Paid" />
+          <ScalarProperty Name="Partial_Pmt" ColumnName="Partial Pmt" />
+          <ScalarProperty Name="DatePaid" ColumnName="DatePaid" />
+          <ScalarProperty Name="AmmountPaid" ColumnName="AmmountPaid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sites">
+      <EntityTypeMapping TypeName="ParksAndLandsModel.sites">
+        <MappingFragment StoreEntitySet="sites">
+          <ScalarProperty Name="CAMPLOT_ID" ColumnName="CAMPLOT_ID" />
+          <ScalarProperty Name="MIDAS" ColumnName="MIDAS" />
+          <ScalarProperty Name="LOTNOS" ColumnName="LOTNOS" />
+          <ScalarProperty Name="LOCATION" ColumnName="LOCATION" />
+          <ScalarProperty Name="WATERBODY" ColumnName="WATERBODY" />
+          <ScalarProperty Name="CTY" ColumnName="CTY" />
+          <ScalarProperty Name="ROAD_NAME" ColumnName="ROAD_NAME" />
+          <ScalarProperty Name="ACCESS" ColumnName="ACCESS" />
+          <ScalarProperty Name="FRONTAGE" ColumnName="FRONTAGE" />
+          <ScalarProperty Name="DEPTH" ColumnName="DEPTH" />
+          <ScalarProperty Name="ACREAGE" ColumnName="ACREAGE" />
+          <ScalarProperty Name="CODE" ColumnName="CODE" />
+          <ScalarProperty Name="DRIVEWAY" ColumnName="DRIVEWAY" />
+          <ScalarProperty Name="PARKING" ColumnName="PARKING" />
+          <ScalarProperty Name="PARKING_" ColumnName="PARKING#" />
+          <ScalarProperty Name="OWNRS_ASSN" ColumnName="OWNRS_ASSN" />
+          <ScalarProperty Name="VEGETATION" ColumnName="VEGETATION" />
+          <ScalarProperty Name="SOIL" ColumnName="SOIL" />
+          <ScalarProperty Name="SLOPE_FRONT" ColumnName="SLOPE_FRONT" />
+          <ScalarProperty Name="SLOPE_BACK" ColumnName="SLOPE_BACK" />
+          <ScalarProperty Name="ENLARGE" ColumnName="ENLARGE" />
+          <ScalarProperty Name="LOT_LINES" ColumnName="LOT_LINES" />
+          <ScalarProperty Name="NOTES" ColumnName="NOTES" />
+          <ScalarProperty Name="Parks" ColumnName="Parks" />
+          <ScalarProperty Name="Comercial" ColumnName="Comercial" />
+          <ScalarProperty Name="RevSharing" ColumnName="RevSharing" />
+          <ScalarProperty Name="Archive" ColumnName="Archive" />
+          <ScalarProperty Name="ArchiveDate" ColumnName="ArchiveDate" />
+          <ScalarProperty Name="LeaseEndDate" ColumnName="LeaseEndDate" />
+          <ScalarProperty Name="CommercialSpecialNotes" ColumnName="CommercialSpecialNotes" />
+          <ScalarProperty Name="Map" ColumnName="Map" />
+          <ScalarProperty Name="Plan" ColumnName="Plan" />
+          <ScalarProperty Name="Lot" ColumnName="Lot" />
+          <ScalarProperty Name="CustomerNumber" ColumnName="CustomerNumber" />
+          <ScalarProperty Name="WasteWaterSystemStatus" ColumnName="WasteWaterSystemStatus" />
+          <ScalarProperty Name="Cancelled" ColumnName="Cancelled" />
+          <ScalarProperty Name="INSPECTN_DATE" ColumnName="INSPECTN DATE" />
+          <ScalarProperty Name="INSPECTORS" ColumnName="INSPECTORS" />
+          <ScalarProperty Name="LATITUDE" ColumnName="LATITUDE" />
+          <ScalarProperty Name="LONGITUDE" ColumnName="LONGITUDE" />
+          <ScalarProperty Name="NextDate" ColumnName="NextDate" />
+          <ScalarProperty Name="VEND_CUST_CD" ColumnName="VEND_CUST_CD" />
+          <ScalarProperty Name="FSNAME" ColumnName="FSNAME" />
+          <ScalarProperty Name="LNAME" ColumnName="LNAME" />
+          <ScalarProperty Name="CONAME" ColumnName="CONAME" />
+          <ScalarProperty Name="AddName" ColumnName="AddName" />
+          <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+          <ScalarProperty Name="TOWN" ColumnName="TOWN" />
+          <ScalarProperty Name="STATE" ColumnName="STATE" />
+          <ScalarProperty Name="ZIP" ColumnName="ZIP" />
+          <ScalarProperty Name="HOME_PHONE" ColumnName="HOME PHONE" />
+          <ScalarProperty Name="CELL_PHONE" ColumnName="CELL PHONE" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="TRANSFER_DATE" ColumnName="TRANSFER DATE" />
+          <ScalarProperty Name="FORMER_OWNER_NOTES" ColumnName="FORMER OWNER/NOTES" />
+          <ScalarProperty Name="Seboeis_Dam_Mailing" ColumnName="Seboeis Dam Mailing" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="structures">
+      <EntityTypeMapping TypeName="ParksAndLandsModel.structures">
+        <MappingFragment StoreEntitySet="structures">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Camplot_ID" ColumnName="Camplot ID" />
+          <ScalarProperty Name="STRUCTURE_DESC" ColumnName="STRUCTURE DESC" />
+          <ScalarProperty Name="CONDITION" ColumnName="CONDITION" />
+          <ScalarProperty Name="ROOF_TYPE" ColumnName="ROOF TYPE" />
+          <ScalarProperty Name="SIDING" ColumnName="SIDING" />
+          <ScalarProperty Name="FOUNDATION" ColumnName="FOUNDATION" />
+          <ScalarProperty Name="FOUND_CONDITION" ColumnName="FOUND CONDITION" />
+          <ScalarProperty Name="WATER_DISTANCE" ColumnName="WATER DISTANCE" />
+          <ScalarProperty Name="TOILET_TYPE" ColumnName="TOILET TYPE" />
+          <ScalarProperty Name="LOCATION" ColumnName="LOCATION" />
+          <ScalarProperty Name="T_WTR_DISTANCE" ColumnName="T-WTR DISTANCE" />
+          <ScalarProperty Name="T_CONDITION" ColumnName="T CONDITION" />
+          <ScalarProperty Name="GREY_WATER" ColumnName="GREY WATER" />
+          <ScalarProperty Name="VENT_PIPES" ColumnName="VENT PIPES" />
+          <ScalarProperty Name="SEPTIC_FIELD" ColumnName="SEPTIC FIELD" />
+          <ScalarProperty Name="G_WTR_DISTANCE" ColumnName="G-WTR DISTANCE" />
+          <ScalarProperty Name="G_CONDITION" ColumnName="G CONDITION" />
+          <ScalarProperty Name="G_COMPLIANCE" ColumnName="G COMPLIANCE" />
+          <ScalarProperty Name="GARBAGE_DISPOSAL" ColumnName="GARBAGE DISPOSAL" />
+          <ScalarProperty Name="WATER_SUPPLY" ColumnName="WATER SUPPLY" />
+          <ScalarProperty Name="PIPED_WATER" ColumnName="PIPED WATER" />
+          <ScalarProperty Name="HEATING" ColumnName="HEATING" />
+          <ScalarProperty Name="STOVE_PIPES" ColumnName="STOVE PIPES" />
+          <ScalarProperty Name="SCREENED" ColumnName="SCREENED" />
+          <ScalarProperty Name="COOKING" ColumnName="COOKING" />
+          <ScalarProperty Name="LIGHTING" ColumnName="LIGHTING" />
+          <ScalarProperty Name="AC_ELECTRIC" ColumnName="AC ELECTRIC" />
+          <ScalarProperty Name="TELEPHONE" ColumnName="TELEPHONE" />
+          <ScalarProperty Name="AUX_STRUCT" ColumnName="AUX STRUCT" />
+          <ScalarProperty Name="AUX_DESC" ColumnName="AUX DESC" />
+          <ScalarProperty Name="DOCK" ColumnName="DOCK" />
+          <ScalarProperty Name="DOCK_DESC" ColumnName="DOCK DESC" />
+          <ScalarProperty Name="COMMENTS" ColumnName="COMMENTS" />
+          <ScalarProperty Name="PHOTO" ColumnName="PHOTO" />
+          <ScalarProperty Name="ShoreLand" ColumnName="ShoreLand" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="towns">
+      <EntityTypeMapping TypeName="ParksAndLandsModel.towns">
+        <MappingFragment StoreEntitySet="towns">
+          <ScalarProperty Name="Midas" ColumnName="Midas" />
+          <ScalarProperty Name="Town_name2" ColumnName="Town-name2" />
+          <ScalarProperty Name="LANDSREGION" ColumnName="LANDSREGION" />
+          <ScalarProperty Name="SpecialBilling" ColumnName="SpecialBilling" />
+          <ScalarProperty Name="SpecialAmount" ColumnName="SpecialAmount" />
+          <ScalarProperty Name="RevSharing_Stumpage" ColumnName="RevSharing_Stumpage" />
+          <ScalarProperty Name="RevShare_Camplot" ColumnName="RevShare_Camplot" />
+          <ScalarProperty Name="region" ColumnName="region" />
+          <ScalarProperty Name="plumbingInspectorId" ColumnName="plumbingInspectorId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="valuations">
+      <EntityTypeMapping TypeName="ParksAndLandsModel.valuations">
+        <MappingFragment StoreEntitySet="valuations">
+          <ScalarProperty Name="camplot_ID" ColumnName="camplot ID" />
+          <ScalarProperty Name="VALUATIONYEAR" ColumnName="VALUATIONYEAR" />
+          <ScalarProperty Name="VALUATION" ColumnName="VALUATION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="z_photo_test">
+      <EntityTypeMapping TypeName="ParksAndLandsModel.z_photo_test">
+        <MappingFragment StoreEntitySet="z_photo_test">
+          <ScalarProperty Name="k" ColumnName="k" />
+          <ScalarProperty Name="picture" ColumnName="picture" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="buoyTypes">
+      <EntityTypeMapping TypeName="ParksAndLandsModel.buoyTypes">
+        <MappingFragment StoreEntitySet="buoyTypes">
+          <ScalarProperty Name="buoyTypeImage" ColumnName="buoyTypeImage" />
+          <ScalarProperty Name="buoyTypeDescr" ColumnName="buoyTypeDescr" />
+          <ScalarProperty Name="buoyTypeName" ColumnName="buoyTypeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,638 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_NewBackgroundProfile>True</_NewBackgroundProfile>
+    <_PublishTargetUrl>c:\temp\Farmshare</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="AppCacheSW.js">
+      <publishTime>05/09/2018 16:32:50</publishTime>
+    </File>
+    <File Include="AppCacheSW2.js">
+      <publishTime>08/23/2017 13:25:41</publishTime>
+    </File>
+    <File Include="AppCacheSWOld.js">
+      <publishTime>08/22/2017 16:15:21</publishTime>
+    </File>
+    <File Include="ApplicationInsights.config">
+      <publishTime>04/30/2018 08:44:57</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/HelpPage.css">
+      <publishTime>04/30/2018 08:44:58</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/Api.cshtml">
+      <publishTime>04/30/2018 08:44:59</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/ApiGroup.cshtml">
+      <publishTime>04/30/2018 08:44:59</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/CollectionModelDescription.cshtml">
+      <publishTime>04/30/2018 08:44:59</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/ComplexTypeModelDescription.cshtml">
+      <publishTime>04/30/2018 08:44:59</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/DictionaryModelDescription.cshtml">
+      <publishTime>04/30/2018 08:44:59</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/EnumTypeModelDescription.cshtml">
+      <publishTime>04/30/2018 08:44:59</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/HelpPageApiModel.cshtml">
+      <publishTime>04/30/2018 08:44:59</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/ImageSample.cshtml">
+      <publishTime>04/30/2018 08:44:59</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/InvalidSample.cshtml">
+      <publishTime>04/30/2018 08:44:59</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/KeyValuePairModelDescription.cshtml">
+      <publishTime>04/30/2018 08:44:59</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/ModelDescriptionLink.cshtml">
+      <publishTime>04/30/2018 08:44:59</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/Parameters.cshtml">
+      <publishTime>04/30/2018 08:44:59</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/Samples.cshtml">
+      <publishTime>04/30/2018 08:44:59</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/SimpleTypeModelDescription.cshtml">
+      <publishTime>04/30/2018 08:44:59</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/DisplayTemplates/TextSample.cshtml">
+      <publishTime>04/30/2018 08:44:59</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/Index.cshtml">
+      <publishTime>04/30/2018 08:44:59</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Help/ResourceModel.cshtml">
+      <publishTime>04/30/2018 08:44:59</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Shared/_Layout.cshtml">
+      <publishTime>04/30/2018 08:44:59</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/Web.config">
+      <publishTime>04/30/2018 08:44:59</publishTime>
+    </File>
+    <File Include="Areas/HelpPage/Views/_ViewStart.cshtml">
+      <publishTime>04/30/2018 08:44:59</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>04/30/2018 08:45:13</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.pdb">
+      <publishTime>04/30/2018 08:45:13</publishTime>
+    </File>
+    <File Include="bin/ApplicationInsights.config">
+      <publishTime>04/30/2018 08:44:57</publishTime>
+    </File>
+    <File Include="bin/Camplots.dll">
+      <publishTime>05/10/2018 09:18:15</publishTime>
+    </File>
+    <File Include="bin/Camplots.pdb">
+      <publishTime>05/10/2018 09:18:15</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>04/30/2018 08:45:13</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>04/30/2018 08:45:13</publishTime>
+    </File>
+    <File Include="bin/jQuery.Validation.Unobtrusive.Native.dll">
+      <publishTime>04/30/2018 08:45:23</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
+      <publishTime>04/30/2018 08:45:14</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.DependencyCollector.dll">
+      <publishTime>04/30/2018 08:45:15</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
+      <publishTime>04/30/2018 08:45:15</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
+      <publishTime>04/30/2018 08:45:16</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Web.dll">
+      <publishTime>04/30/2018 08:45:15</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.WindowsServer.dll">
+      <publishTime>04/30/2018 08:45:16</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ApplicationInsights.dll">
+      <publishTime>04/30/2018 08:45:14</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>04/30/2018 08:45:19</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>04/30/2018 08:45:20</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>04/30/2018 08:45:21</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>04/30/2018 08:45:20</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe.config">
+      <publishTime>04/30/2018 08:45:20</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.rsp">
+      <publishTime>04/30/2018 08:45:20</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe">
+      <publishTime>04/30/2018 08:45:20</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.rsp">
+      <publishTime>04/30/2018 08:45:20</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>04/30/2018 08:45:19</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>04/30/2018 08:45:19</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
+      <publishTime>04/30/2018 08:45:19</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>04/30/2018 08:45:20</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
+      <publishTime>04/30/2018 08:45:19</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>04/30/2018 08:45:20</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>04/30/2018 08:45:19</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
+      <publishTime>04/30/2018 08:45:20</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
+      <publishTime>04/30/2018 08:45:20</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>04/30/2018 08:45:20</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.AppContext.dll">
+      <publishTime>04/30/2018 08:45:20</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>04/30/2018 08:45:20</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
+      <publishTime>04/30/2018 08:45:20</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.dll">
+      <publishTime>04/30/2018 08:45:20</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.Primitives.dll">
+      <publishTime>04/30/2018 08:45:20</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>04/30/2018 08:45:20</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>04/30/2018 08:45:20</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe.config">
+      <publishTime>04/30/2018 08:45:20</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.rsp">
+      <publishTime>04/30/2018 08:45:20</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>04/30/2018 08:45:20</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>04/30/2018 08:45:20</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>04/30/2018 08:45:16</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>04/30/2018 08:45:19</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>04/30/2018 08:45:17</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>04/30/2018 08:45:18</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>04/30/2018 08:45:16</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>04/30/2018 08:45:16</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>04/30/2018 08:45:16</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>04/30/2018 08:45:19</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>04/30/2018 08:45:19</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>04/30/2018 08:45:19</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>04/30/2018 08:45:22</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>04/30/2018 08:44:59</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>04/30/2018 08:44:59</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>04/30/2018 08:44:59</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>04/30/2018 08:44:57</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>04/30/2018 08:45:06</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>04/30/2018 08:45:06</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>04/30/2018 08:45:06</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>04/30/2018 08:45:06</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>04/30/2018 08:44:57</publishTime>
+    </File>
+    <File Include="JS/App/Checkin.js">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/App/Checkin.js.map">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/App/Checkout.js">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/App/Checkout.js.map">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/App/file1.js">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/App/file1.js.map">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/App/HomeBase.js">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/App/HomeBase.js.map">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/App/PhotoEdit.js">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/App/PhotoEdit.js.map">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/App/PhotoIndex.js">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/App/PhotoIndex.js.map">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/App/sitesEdit.js">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/App/sitesEdit.js.map">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/App/sitesIndex.js">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/App/sitesIndex.js.map">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/App/sitesInsert.js">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/App/sitesInsert.js.map">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/bootstrap.js">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/bootstrap.js.map">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/CustomUtility/Edits.js">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/CustomUtility/Edits.js.map">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/CustomUtility/GlobalReplace.js">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/CustomUtility/GlobalReplace.js.map">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/CustomUtility/messageDisplay.js">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/CustomUtility/messageDisplay.js.map">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/DBScripts/CamplotsOfflineDB.js">
+      <publishTime>08/11/2017 08:00:06</publishTime>
+    </File>
+    <File Include="JS/DBScripts/CamplotsOfflineDB.js.map">
+      <publishTime>08/11/2017 08:00:06</publishTime>
+    </File>
+    <File Include="JS/DBScripts/deleteRow.js">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/DBScripts/deleteRow.js.map">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/DBScripts/getAll.js">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/DBScripts/getAll.js.map">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/DBScripts/getRow.js">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/DBScripts/getRow.js.map">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/DBScripts/OpenCamplotsOfflineDB.js">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/DBScripts/OpenCamplotsOfflineDB.js.map">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/DBScripts/UpdateSite.js">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/DBScripts/UpdateSite.js.map">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/jquery-1.10.2.intellisense.js">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/jquery-1.10.2.intellisense.js.map">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/jquery-1.10.2.js">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/jquery-1.10.2.js.map">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/jquery.filedrop.js">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/jquery.filedrop.js.map">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/modernizr-2.6.2.js">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/modernizr-2.6.2.js.map">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/respond.js">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="JS/respond.js.map">
+      <publishTime>08/14/2017 08:58:06</publishTime>
+    </File>
+    <File Include="logs/message.log">
+      <publishTime>05/10/2018 09:14:25</publishTime>
+    </File>
+    <File Include="Models/Model1.edmx.diagram">
+      <publishTime>04/30/2018 08:45:01</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>04/30/2018 08:44:57</publishTime>
+    </File>
+    <File Include="Readme.txt">
+      <publishTime>04/30/2018 08:44:57</publishTime>
+    </File>
+    <File Include="Scripts/App/Checkin.js">
+      <publishTime>05/10/2018 09:14:01</publishTime>
+    </File>
+    <File Include="Scripts/App/Checkout.js">
+      <publishTime>04/30/2018 08:45:03</publishTime>
+    </File>
+    <File Include="Scripts/App/Fetch.js">
+      <publishTime>05/10/2018 08:56:04</publishTime>
+    </File>
+    <File Include="Scripts/App/HomeBase.js">
+      <publishTime>05/08/2018 12:14:53</publishTime>
+    </File>
+    <File Include="Scripts/App/HomeBase2.js">
+      <publishTime>08/24/2017 08:45:47</publishTime>
+    </File>
+    <File Include="Scripts/App/HomeBase3.js">
+      <publishTime>08/24/2017 12:06:55</publishTime>
+    </File>
+    <File Include="Scripts/App/OpenCamplotsOfflineDB.js">
+      <publishTime>04/30/2018 08:45:03</publishTime>
+    </File>
+    <File Include="Scripts/App/PhotoEdit.js">
+      <publishTime>08/21/2017 15:50:56</publishTime>
+    </File>
+    <File Include="Scripts/App/PhotoIndex.js">
+      <publishTime>08/08/2017 13:27:56</publishTime>
+    </File>
+    <File Include="Scripts/App/sitesEdit.js">
+      <publishTime>04/30/2018 08:45:03</publishTime>
+    </File>
+    <File Include="Scripts/App/sitesIndex.js">
+      <publishTime>04/30/2018 08:45:03</publishTime>
+    </File>
+    <File Include="Scripts/App/sitesIndex2.js">
+      <publishTime>08/22/2017 14:46:37</publishTime>
+    </File>
+    <File Include="Scripts/App/sitesIndexOnline.js">
+      <publishTime>05/10/2018 08:58:44</publishTime>
+    </File>
+    <File Include="Scripts/App/sitesInsert.js">
+      <publishTime>04/30/2018 08:45:03</publishTime>
+    </File>
+    <File Include="Scripts/App/UpdateSite.js">
+      <publishTime>04/30/2018 08:45:03</publishTime>
+    </File>
+    <File Include="Scripts/AppCacheJS.js">
+      <publishTime>08/22/2017 16:46:04</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>04/30/2018 08:45:02</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>04/30/2018 08:45:02</publishTime>
+    </File>
+    <File Include="Scripts/CustomUtility/Edits.js">
+      <publishTime>04/30/2018 08:45:03</publishTime>
+    </File>
+    <File Include="Scripts/CustomUtility/GlobalReplace.js">
+      <publishTime>07/19/2017 16:17:28</publishTime>
+    </File>
+    <File Include="Scripts/CustomUtility/messageDisplay.js">
+      <publishTime>04/30/2018 08:45:03</publishTime>
+    </File>
+    <File Include="Scripts/DBScripts/CamplotsOfflineDB.js">
+      <publishTime>07/25/2017 12:02:15</publishTime>
+    </File>
+    <File Include="Scripts/DBScripts/deleteAll.js">
+      <publishTime>04/30/2018 08:45:03</publishTime>
+    </File>
+    <File Include="Scripts/DBScripts/deleteRow.js">
+      <publishTime>04/30/2018 08:45:03</publishTime>
+    </File>
+    <File Include="Scripts/DBScripts/getAll.js">
+      <publishTime>04/30/2018 08:45:03</publishTime>
+    </File>
+    <File Include="Scripts/DBScripts/getRow.js">
+      <publishTime>04/30/2018 08:45:03</publishTime>
+    </File>
+    <File Include="Scripts/DBScripts/OpenCamplotsOfflineDB.js">
+      <publishTime>08/14/2017 08:51:12</publishTime>
+    </File>
+    <File Include="Scripts/DBScripts/UpdateSite.js">
+      <publishTime>08/15/2017 07:57:57</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.js">
+      <publishTime>07/17/2017 12:29:36</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.js">
+      <publishTime>07/17/2017 12:29:36</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.map">
+      <publishTime>07/17/2017 12:29:36</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.1.js">
+      <publishTime>04/30/2018 08:45:02</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.1.min.js">
+      <publishTime>04/30/2018 08:45:02</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.1.min.map">
+      <publishTime>04/30/2018 08:45:02</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.1.slim.js">
+      <publishTime>04/30/2018 08:45:02</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.1.slim.min.js">
+      <publishTime>04/30/2018 08:45:02</publishTime>
+    </File>
+    <File Include="Scripts/jquery-3.1.1.slim.min.map">
+      <publishTime>04/30/2018 08:45:02</publishTime>
+    </File>
+    <File Include="Scripts/jquery.filedrop.js">
+      <publishTime>04/30/2018 08:45:02</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>04/30/2018 08:45:02</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>04/30/2018 08:45:02</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>04/30/2018 08:45:02</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>04/30/2018 08:45:02</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>04/30/2018 08:45:02</publishTime>
+    </File>
+    <File Include="Scripts/respond.js">
+      <publishTime>04/30/2018 08:45:02</publishTime>
+    </File>
+    <File Include="Scripts/respond.min.js">
+      <publishTime>04/30/2018 08:45:02</publishTime>
+    </File>
+    <File Include="tsconfig.json">
+      <publishTime>07/25/2017 09:47:05</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>05/07/2018 12:52:11</publishTime>
+    </File>
+    <File Include="Views/Manifest/Index.cshtml">
+      <publishTime>08/28/2017 09:02:46</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>04/30/2018 08:45:03</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>05/10/2018 09:02:28</publishTime>
+    </File>
+    <File Include="Views/sites/Checkin.cshtml">
+      <publishTime>04/30/2018 08:45:03</publishTime>
+    </File>
+    <File Include="Views/sites/Checkout.cshtml">
+      <publishTime>04/30/2018 08:45:03</publishTime>
+    </File>
+    <File Include="Views/sites/Edit.cshtml">
+      <publishTime>04/30/2018 08:45:03</publishTime>
+    </File>
+    <File Include="Views/sites/Index.cshtml">
+      <publishTime>04/30/2018 08:45:03</publishTime>
+    </File>
+    <File Include="Views/sites/IndexHtml.cshtml">
+      <publishTime>08/28/2017 08:33:05</publishTime>
+    </File>
+    <File Include="Views/sites/IndexOffline.cshtml">
+      <publishTime>04/30/2018 08:45:03</publishTime>
+    </File>
+    <File Include="Views/sites/IndexOnline.cshtml">
+      <publishTime>05/10/2018 09:05:16</publishTime>
+    </File>
+    <File Include="Views/sites/Menu.cshtml">
+      <publishTime>05/10/2018 09:14:54</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>04/30/2018 08:45:03</publishTime>
+    </File>
+    <File Include="Views/z_photo_test/Create.cshtml">
+      <publishTime>08/07/2017 16:24:46</publishTime>
+    </File>
+    <File Include="Views/z_photo_test/Delete.cshtml">
+      <publishTime>08/07/2017 16:24:47</publishTime>
+    </File>
+    <File Include="Views/z_photo_test/Details.cshtml">
+      <publishTime>08/07/2017 16:24:48</publishTime>
+    </File>
+    <File Include="Views/z_photo_test/drag.cshtml">
+      <publishTime>08/14/2017 10:26:30</publishTime>
+    </File>
+    <File Include="Views/z_photo_test/Edit.cshtml">
+      <publishTime>08/21/2017 15:52:21</publishTime>
+    </File>
+    <File Include="Views/z_photo_test/Index.cshtml">
+      <publishTime>08/08/2017 10:10:02</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>04/30/2018 08:45:03</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>05/01/2018 13:05:53</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ParksAndLandsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="buoyTypes">
+    <Key>
+      <PropertyRef Name="buoyTypeName" />
+    </Key>
+    <Property Name="buoyTypeName" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="buoyTypeDescr" Type="varchar" MaxLength="100" />
+    <Property Name="buoyTypeImage" Type="image" />
+  </EntityType>
+  <EntityType Name="inspections">
+    <Key>
+      <PropertyRef Name="camplot ID" />
+    </Key>
+    <Property Name="camplot ID" Type="int" Nullable="false" />
+    <Property Name="INSPECTN DATE" Type="datetime" Nullable="false" />
+    <Property Name="INSPECTORS" Type="varchar" MaxLength="10" />
+    <Property Name="NextDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="latLon">
+    <Key>
+      <PropertyRef Name="Camplot_ID" />
+    </Key>
+    <Property Name="MI_PRINX" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Camplot_ID" Type="int" Nullable="false" />
+    <Property Name="LATITUDE" Type="float" />
+    <Property Name="LONGITUDE" Type="float" />
+    <Property Name="MIDAS" Type="varchar" MaxLength="5" />
+    <Property Name="LOTNOS" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="mapinfo_prinx">
+    <Key>
+      <PropertyRef Name="MI_PRINX" />
+    </Key>
+    <Property Name="CAMPLOT_ID" Type="int" Nullable="false" />
+    <Property Name="MI_PRINX" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="owners">
+    <Key>
+      <PropertyRef Name="Camplot ID" />
+    </Key>
+    <Property Name="Camplot ID" Type="int" Nullable="false" />
+    <Property Name="VEND_CUST_CD" Type="varchar" MaxLength="255" />
+    <Property Name="FSNAME" Type="varchar" MaxLength="25" />
+    <Property Name="LNAME" Type="varchar" MaxLength="23" />
+    <Property Name="CONAME" Type="varchar" MaxLength="65" />
+    <Property Name="AddName" Type="varchar" MaxLength="50" />
+    <Property Name="ADDRESS" Type="varchar" MaxLength="60" />
+    <Property Name="TOWN" Type="varchar" MaxLength="23" />
+    <Property Name="STATE" Type="varchar" MaxLength="2" />
+    <Property Name="ZIP" Type="varchar" MaxLength="10" />
+    <Property Name="HOME PHONE" Type="varchar" MaxLength="15" />
+    <Property Name="CELL PHONE" Type="varchar" MaxLength="15" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="75" />
+    <Property Name="TRANSFER DATE" Type="datetime" />
+    <Property Name="FORMER OWNER/NOTES" Type="varchar" MaxLength="100" />
+    <Property Name="Seboeis Dam Mailing" Type="bit" />
+  </EntityType>
+  <EntityType Name="plumbingInspectors">
+    <Key>
+      <PropertyRef Name="contactId" />
+    </Key>
+    <Property Name="contactId" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="title" Type="varchar" MaxLength="50" />
+    <Property Name="address" Type="varchar" MaxLength="50" />
+    <Property Name="city" Type="varchar" MaxLength="30" />
+    <Property Name="state" Type="varchar" MaxLength="3" />
+    <Property Name="zip" Type="varchar" MaxLength="10" />
+    <Property Name="phone" Type="varchar" MaxLength="20" />
+    <Property Name="addlPhone" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="rents">
+    <Key>
+      <PropertyRef Name="Camplot ID" />
+      <PropertyRef Name="FEEYear" />
+    </Key>
+    <Property Name="Camplot ID" Type="int" Nullable="false" />
+    <Property Name="FEEYear" Type="smallint" Nullable="false" />
+    <Property Name="FEE" Type="money" />
+    <Property Name="Paid" Type="bit" />
+    <Property Name="Partial Pmt" Type="bit" />
+    <Property Name="DatePaid" Type="datetime" />
+    <Property Name="AmmountPaid" Type="money" />
+  </EntityType>
+  <EntityType Name="sites">
+    <Key>
+      <PropertyRef Name="CAMPLOT_ID" />
+    </Key>
+    <Property Name="CAMPLOT_ID" Type="int" Nullable="false" />
+    <Property Name="MIDAS" Type="varchar" MaxLength="5" />
+    <Property Name="LOTNOS" Type="varchar" MaxLength="10" />
+    <Property Name="LOCATION" Type="varchar" MaxLength="30" />
+    <Property Name="WATERBODY" Type="varchar" MaxLength="30" />
+    <Property Name="CTY" Type="varchar" MaxLength="11" />
+    <Property Name="ROAD_NAME" Type="varchar" MaxLength="50" />
+    <Property Name="ACCESS" Type="varchar" MaxLength="15" />
+    <Property Name="FRONTAGE" Type="float" />
+    <Property Name="DEPTH" Type="float" />
+    <Property Name="ACREAGE" Type="float" />
+    <Property Name="CODE" Type="varchar" MaxLength="2" />
+    <Property Name="DRIVEWAY" Type="bit" Nullable="false" />
+    <Property Name="PARKING" Type="bit" Nullable="false" />
+    <Property Name="PARKING#" Type="int" />
+    <Property Name="OWNRS_ASSN" Type="varchar" MaxLength="50" />
+    <Property Name="VEGETATION" Type="varchar" MaxLength="20" />
+    <Property Name="SOIL" Type="varchar" MaxLength="20" />
+    <Property Name="SLOPE_FRONT" Type="int" />
+    <Property Name="SLOPE_BACK" Type="int" />
+    <Property Name="ENLARGE" Type="varchar" MaxLength="50" />
+    <Property Name="LOT_LINES" Type="varchar" MaxLength="10" />
+    <Property Name="NOTES" Type="ntext" />
+    <Property Name="Parks" Type="bit" Nullable="false" />
+    <Property Name="Comercial" Type="varchar" MaxLength="50" />
+    <Property Name="RevSharing" Type="bit" Nullable="false" />
+    <Property Name="Archive" Type="bit" Nullable="false" />
+    <Property Name="ArchiveDate" Type="varchar" MaxLength="10" />
+    <Property Name="LeaseEndDate" Type="datetime" />
+    <Property Name="CommercialSpecialNotes" Type="ntext" />
+    <Property Name="Map" Type="varchar" MaxLength="10" />
+    <Property Name="Plan" Type="varchar" MaxLength="20" />
+    <Property Name="Lot" Type="varchar" MaxLength="20" />
+    <Property Name="CustomerNumber" Type="varchar" MaxLength="25" />
+    <Property Name="WasteWaterSystemStatus" Type="varchar" MaxLength="50" />
+    <Property Name="Cancelled" Type="bit" Nullable="false" />
+    <Property Name="INSPECTN DATE" Type="datetime" />
+    <Property Name="INSPECTORS" Type="varchar" MaxLength="10" />
+    <Property Name="LATITUDE" Type="float" />
+    <Property Name="LONGITUDE" Type="float" />
+    <Property Name="NextDate" Type="datetime" />
+    <Property Name="VEND_CUST_CD" Type="varchar" MaxLength="255" />
+    <Property Name="FSNAME" Type="varchar" MaxLength="25" />
+    <Property Name="LNAME" Type="varchar" MaxLength="23" />
+    <Property Name="CONAME" Type="varchar" MaxLength="65" />
+    <Property Name="AddName" Type="varchar" MaxLength="50" />
+    <Property Name="ADDRESS" Type="varchar" MaxLength="60" />
+    <Property Name="TOWN" Type="varchar" MaxLength="23" />
+    <Property Name="STATE" Type="varchar" MaxLength="2" />
+    <Property Name="ZIP" Type="varchar" MaxLength="10" />
+    <Property Name="HOME PHONE" Type="varchar" MaxLength="15" />
+    <Property Name="CELL PHONE" Type="varchar" MaxLength="15" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="75" />
+    <Property Name="TRANSFER DATE" Type="datetime" />
+    <Property Name="FORMER OWNER/NOTES" Type="varchar" MaxLength="100" />
+    <Property Name="Seboeis Dam Mailing" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="structures">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="Camplot ID" Type="int" />
+    <Property Name="STRUCTURE DESC" Type="varchar" MaxLength="40" />
+    <Property Name="CONDITION" Type="varchar" MaxLength="15" />
+    <Property Name="ROOF TYPE" Type="varchar" MaxLength="30" />
+    <Property Name="SIDING" Type="varchar" MaxLength="30" />
+    <Property Name="FOUNDATION" Type="varchar" MaxLength="30" />
+    <Property Name="FOUND CONDITION" Type="varchar" MaxLength="15" />
+    <Property Name="WATER DISTANCE" Type="float" />
+    <Property Name="TOILET TYPE" Type="varchar" MaxLength="15" />
+    <Property Name="LOCATION" Type="varchar" MaxLength="10" />
+    <Property Name="T-WTR DISTANCE" Type="varchar" MaxLength="10" />
+    <Property Name="T CONDITION" Type="varchar" MaxLength="10" />
+    <Property Name="GREY WATER" Type="varchar" MaxLength="18" />
+    <Property Name="VENT PIPES" Type="varchar" MaxLength="10" />
+    <Property Name="SEPTIC FIELD" Type="varchar" MaxLength="10" />
+    <Property Name="G-WTR DISTANCE" Type="float" />
+    <Property Name="G CONDITION" Type="varchar" MaxLength="15" />
+    <Property Name="G COMPLIANCE" Type="bit" />
+    <Property Name="GARBAGE DISPOSAL" Type="varchar" MaxLength="15" />
+    <Property Name="WATER SUPPLY" Type="varchar" MaxLength="20" />
+    <Property Name="PIPED WATER" Type="varchar" MaxLength="10" />
+    <Property Name="HEATING" Type="varchar" MaxLength="10" />
+    <Property Name="STOVE PIPES" Type="varchar" MaxLength="10" />
+    <Property Name="SCREENED" Type="varchar" MaxLength="50" />
+    <Property Name="COOKING" Type="varchar" MaxLength="10" />
+    <Property Name="LIGHTING" Type="varchar" MaxLength="10" />
+    <Property Name="AC ELECTRIC" Type="varchar" MaxLength="50" />
+    <Property Name="TELEPHONE" Type="varchar" MaxLength="50" />
+    <Property Name="AUX STRUCT" Type="varchar" MaxLength="10" />
+    <Property Name="AUX DESC" Type="ntext" />
+    <Property Name="DOCK" Type="varchar" MaxLength="15" />
+    <Property Name="DOCK DESC" Type="ntext" />
+    <Property Name="COMMENTS" Type="ntext" />
+    <Property Name="PHOTO" Type="ntext" />
+    <Property Name="ShoreLand" Type="bit" />
+  </EntityType>
+  <EntityType Name="towns">
+    <Key>
+      <PropertyRef Name="Midas" />
+    </Key>
+    <Property Name="Midas" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="Town-name2" Type="varchar" MaxLength="255" />
+    <Property Name="LANDSREGION" Type="varchar" MaxLength="1" />
+    <Property Name="SpecialBilling" Type="bit" />
+    <Property Name="SpecialAmount" Type="int" />
+    <Property Name="RevSharing_Stumpage" Type="float" />
+    <Property Name="RevShare_Camplot" Type="float" />
+    <Property Name="region" Type="varchar" MaxLength="5" />
+    <Property Name="plumbingInspectorId" Type="int" />
+  </EntityType>
+  <EntityType Name="valuations">
+    <Key>
+      <PropertyRef Name="camplot ID" />
+      <PropertyRef Name="VALUATIONYEAR" />
+    </Key>
+    <Property Name="camplot ID" Type="int" Nullable="false" />
+    <Property Name="VALUATIONYEAR" Type="smallint" Nullable="false" />
+    <Property Name="VALUATION" Type="money" Nullable="false" />
+  </EntityType>
+  <EntityType Name="z_photo_test">
+    <Key>
+      <PropertyRef Name="k" />
+    </Key>
+    <Property Name="k" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="picture" Type="image" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ParksAndLandsModelStoreContainer">
+    <EntitySet Name="buoyTypes" EntityType="Self.buoyTypes" Schema="Camplots" store:Type="Tables" />
+    <EntitySet Name="inspections" EntityType="Self.inspections" Schema="Camplots" store:Type="Tables" />
+    <EntitySet Name="latLon" EntityType="Self.latLon" Schema="Camplots" store:Type="Tables" />
+    <EntitySet Name="mapinfo_prinx" EntityType="Self.mapinfo_prinx" Schema="Camplots" store:Type="Tables" />
+    <EntitySet Name="owners" EntityType="Self.owners" Schema="Camplots" store:Type="Tables" />
+    <EntitySet Name="plumbingInspectors" EntityType="Self.plumbingInspectors" Schema="Camplots" store:Type="Tables" />
+    <EntitySet Name="rents" EntityType="Self.rents" Schema="Camplots" store:Type="Tables" />
+    <EntitySet Name="sites" EntityType="Self.sites" Schema="Camplots" store:Type="Tables" />
+    <EntitySet Name="structures" EntityType="Self.structures" Schema="Camplots" store:Type="Tables" />
+    <EntitySet Name="towns" EntityType="Self.towns" Schema="Camplots" store:Type="Tables" />
+    <EntitySet Name="valuations" EntityType="Self.valuations" Schema="Camplots" store:Type="Tables" />
+    <EntitySet Name="z_photo_test" EntityType="Self.z_photo_test" Schema="Camplots" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

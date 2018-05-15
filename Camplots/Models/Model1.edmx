@@ -1,0 +1,724 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ParksAndLandsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="buoyTypes">
+          <Key>
+            <PropertyRef Name="buoyTypeName" />
+          </Key>
+          <Property Name="buoyTypeName" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="buoyTypeDescr" Type="varchar" MaxLength="100" />
+          <Property Name="buoyTypeImage" Type="image" />
+        </EntityType>
+        <EntityType Name="inspections">
+          <Key>
+            <PropertyRef Name="camplot ID" />
+          </Key>
+          <Property Name="camplot ID" Type="int" Nullable="false" />
+          <Property Name="INSPECTN DATE" Type="datetime" Nullable="false" />
+          <Property Name="INSPECTORS" Type="varchar" MaxLength="10" />
+          <Property Name="NextDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="latLon">
+          <Key>
+            <PropertyRef Name="Camplot_ID" />
+          </Key>
+          <Property Name="MI_PRINX" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Camplot_ID" Type="int" Nullable="false" />
+          <Property Name="LATITUDE" Type="float" />
+          <Property Name="LONGITUDE" Type="float" />
+          <Property Name="MIDAS" Type="varchar" MaxLength="5" />
+          <Property Name="LOTNOS" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="mapinfo_prinx">
+          <Key>
+            <PropertyRef Name="MI_PRINX" />
+          </Key>
+          <Property Name="CAMPLOT_ID" Type="int" Nullable="false" />
+          <Property Name="MI_PRINX" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="owners">
+          <Key>
+            <PropertyRef Name="Camplot ID" />
+          </Key>
+          <Property Name="Camplot ID" Type="int" Nullable="false" />
+          <Property Name="VEND_CUST_CD" Type="varchar" MaxLength="255" />
+          <Property Name="FSNAME" Type="varchar" MaxLength="25" />
+          <Property Name="LNAME" Type="varchar" MaxLength="23" />
+          <Property Name="CONAME" Type="varchar" MaxLength="65" />
+          <Property Name="AddName" Type="varchar" MaxLength="50" />
+          <Property Name="ADDRESS" Type="varchar" MaxLength="60" />
+          <Property Name="TOWN" Type="varchar" MaxLength="23" />
+          <Property Name="STATE" Type="varchar" MaxLength="2" />
+          <Property Name="ZIP" Type="varchar" MaxLength="10" />
+          <Property Name="HOME PHONE" Type="varchar" MaxLength="15" />
+          <Property Name="CELL PHONE" Type="varchar" MaxLength="15" />
+          <Property Name="EMAIL" Type="varchar" MaxLength="75" />
+          <Property Name="TRANSFER DATE" Type="datetime" />
+          <Property Name="FORMER OWNER/NOTES" Type="varchar" MaxLength="100" />
+          <Property Name="Seboeis Dam Mailing" Type="bit" />
+        </EntityType>
+        <EntityType Name="plumbingInspectors">
+          <Key>
+            <PropertyRef Name="contactId" />
+          </Key>
+          <Property Name="contactId" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="title" Type="varchar" MaxLength="50" />
+          <Property Name="address" Type="varchar" MaxLength="50" />
+          <Property Name="city" Type="varchar" MaxLength="30" />
+          <Property Name="state" Type="varchar" MaxLength="3" />
+          <Property Name="zip" Type="varchar" MaxLength="10" />
+          <Property Name="phone" Type="varchar" MaxLength="20" />
+          <Property Name="addlPhone" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="rents">
+          <Key>
+            <PropertyRef Name="Camplot ID" />
+            <PropertyRef Name="FEEYear" />
+          </Key>
+          <Property Name="Camplot ID" Type="int" Nullable="false" />
+          <Property Name="FEEYear" Type="smallint" Nullable="false" />
+          <Property Name="FEE" Type="money" />
+          <Property Name="Paid" Type="bit" />
+          <Property Name="Partial Pmt" Type="bit" />
+          <Property Name="DatePaid" Type="datetime" />
+          <Property Name="AmmountPaid" Type="money" />
+        </EntityType>
+        <EntityType Name="sites">
+          <Key>
+            <PropertyRef Name="CAMPLOT_ID" />
+          </Key>
+          <Property Name="CAMPLOT_ID" Type="int" Nullable="false" />
+          <Property Name="MIDAS" Type="varchar" MaxLength="5" />
+          <Property Name="LOTNOS" Type="varchar" MaxLength="10" />
+          <Property Name="LOCATION" Type="varchar" MaxLength="30" />
+          <Property Name="WATERBODY" Type="varchar" MaxLength="30" />
+          <Property Name="CTY" Type="varchar" MaxLength="11" />
+          <Property Name="ROAD_NAME" Type="varchar" MaxLength="50" />
+          <Property Name="ACCESS" Type="varchar" MaxLength="15" />
+          <Property Name="FRONTAGE" Type="float" />
+          <Property Name="DEPTH" Type="float" />
+          <Property Name="ACREAGE" Type="float" />
+          <Property Name="CODE" Type="varchar" MaxLength="2" />
+          <Property Name="DRIVEWAY" Type="bit" Nullable="false" />
+          <Property Name="PARKING" Type="bit" Nullable="false" />
+          <Property Name="PARKING#" Type="int" />
+          <Property Name="OWNRS_ASSN" Type="varchar" MaxLength="50" />
+          <Property Name="VEGETATION" Type="varchar" MaxLength="20" />
+          <Property Name="SOIL" Type="varchar" MaxLength="20" />
+          <Property Name="SLOPE_FRONT" Type="int" />
+          <Property Name="SLOPE_BACK" Type="int" />
+          <Property Name="ENLARGE" Type="varchar" MaxLength="50" />
+          <Property Name="LOT_LINES" Type="varchar" MaxLength="10" />
+          <Property Name="NOTES" Type="ntext" />
+          <Property Name="Parks" Type="bit" Nullable="false" />
+          <Property Name="Comercial" Type="varchar" MaxLength="50" />
+          <Property Name="RevSharing" Type="bit" Nullable="false" />
+          <Property Name="Archive" Type="bit" Nullable="false" />
+          <Property Name="ArchiveDate" Type="varchar" MaxLength="10" />
+          <Property Name="LeaseEndDate" Type="datetime" />
+          <Property Name="CommercialSpecialNotes" Type="ntext" />
+          <Property Name="Map" Type="varchar" MaxLength="10" />
+          <Property Name="Plan" Type="varchar" MaxLength="20" />
+          <Property Name="Lot" Type="varchar" MaxLength="20" />
+          <Property Name="CustomerNumber" Type="varchar" MaxLength="25" />
+          <Property Name="WasteWaterSystemStatus" Type="varchar" MaxLength="50" />
+          <Property Name="Cancelled" Type="bit" Nullable="false" />
+          <Property Name="INSPECTN DATE" Type="datetime" />
+          <Property Name="INSPECTORS" Type="varchar" MaxLength="10" />
+          <Property Name="LATITUDE" Type="float" />
+          <Property Name="LONGITUDE" Type="float" />
+          <Property Name="NextDate" Type="datetime" />
+          <Property Name="VEND_CUST_CD" Type="varchar" MaxLength="255" />
+          <Property Name="FSNAME" Type="varchar" MaxLength="25" />
+          <Property Name="LNAME" Type="varchar" MaxLength="23" />
+          <Property Name="CONAME" Type="varchar" MaxLength="65" />
+          <Property Name="AddName" Type="varchar" MaxLength="50" />
+          <Property Name="ADDRESS" Type="varchar" MaxLength="60" />
+          <Property Name="TOWN" Type="varchar" MaxLength="23" />
+          <Property Name="STATE" Type="varchar" MaxLength="2" />
+          <Property Name="ZIP" Type="varchar" MaxLength="10" />
+          <Property Name="HOME PHONE" Type="varchar" MaxLength="15" />
+          <Property Name="CELL PHONE" Type="varchar" MaxLength="15" />
+          <Property Name="EMAIL" Type="varchar" MaxLength="75" />
+          <Property Name="TRANSFER DATE" Type="datetime" />
+          <Property Name="FORMER OWNER/NOTES" Type="varchar" MaxLength="100" />
+          <Property Name="Seboeis Dam Mailing" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="structures">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="Camplot ID" Type="int" />
+          <Property Name="STRUCTURE DESC" Type="varchar" MaxLength="40" />
+          <Property Name="CONDITION" Type="varchar" MaxLength="15" />
+          <Property Name="ROOF TYPE" Type="varchar" MaxLength="30" />
+          <Property Name="SIDING" Type="varchar" MaxLength="30" />
+          <Property Name="FOUNDATION" Type="varchar" MaxLength="30" />
+          <Property Name="FOUND CONDITION" Type="varchar" MaxLength="15" />
+          <Property Name="WATER DISTANCE" Type="float" />
+          <Property Name="TOILET TYPE" Type="varchar" MaxLength="15" />
+          <Property Name="LOCATION" Type="varchar" MaxLength="10" />
+          <Property Name="T-WTR DISTANCE" Type="varchar" MaxLength="10" />
+          <Property Name="T CONDITION" Type="varchar" MaxLength="10" />
+          <Property Name="GREY WATER" Type="varchar" MaxLength="18" />
+          <Property Name="VENT PIPES" Type="varchar" MaxLength="10" />
+          <Property Name="SEPTIC FIELD" Type="varchar" MaxLength="10" />
+          <Property Name="G-WTR DISTANCE" Type="float" />
+          <Property Name="G CONDITION" Type="varchar" MaxLength="15" />
+          <Property Name="G COMPLIANCE" Type="bit" />
+          <Property Name="GARBAGE DISPOSAL" Type="varchar" MaxLength="15" />
+          <Property Name="WATER SUPPLY" Type="varchar" MaxLength="20" />
+          <Property Name="PIPED WATER" Type="varchar" MaxLength="10" />
+          <Property Name="HEATING" Type="varchar" MaxLength="10" />
+          <Property Name="STOVE PIPES" Type="varchar" MaxLength="10" />
+          <Property Name="SCREENED" Type="varchar" MaxLength="50" />
+          <Property Name="COOKING" Type="varchar" MaxLength="10" />
+          <Property Name="LIGHTING" Type="varchar" MaxLength="10" />
+          <Property Name="AC ELECTRIC" Type="varchar" MaxLength="50" />
+          <Property Name="TELEPHONE" Type="varchar" MaxLength="50" />
+          <Property Name="AUX STRUCT" Type="varchar" MaxLength="10" />
+          <Property Name="AUX DESC" Type="ntext" />
+          <Property Name="DOCK" Type="varchar" MaxLength="15" />
+          <Property Name="DOCK DESC" Type="ntext" />
+          <Property Name="COMMENTS" Type="ntext" />
+          <Property Name="PHOTO" Type="ntext" />
+          <Property Name="ShoreLand" Type="bit" />
+        </EntityType>
+        <EntityType Name="towns">
+          <Key>
+            <PropertyRef Name="Midas" />
+          </Key>
+          <Property Name="Midas" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="Town-name2" Type="varchar" MaxLength="255" />
+          <Property Name="LANDSREGION" Type="varchar" MaxLength="1" />
+          <Property Name="SpecialBilling" Type="bit" />
+          <Property Name="SpecialAmount" Type="int" />
+          <Property Name="RevSharing_Stumpage" Type="float" />
+          <Property Name="RevShare_Camplot" Type="float" />
+          <Property Name="region" Type="varchar" MaxLength="5" />
+          <Property Name="plumbingInspectorId" Type="int" />
+        </EntityType>
+        <EntityType Name="valuations">
+          <Key>
+            <PropertyRef Name="camplot ID" />
+            <PropertyRef Name="VALUATIONYEAR" />
+          </Key>
+          <Property Name="camplot ID" Type="int" Nullable="false" />
+          <Property Name="VALUATIONYEAR" Type="smallint" Nullable="false" />
+          <Property Name="VALUATION" Type="money" Nullable="false" />
+        </EntityType>
+        <EntityType Name="z_photo_test">
+          <Key>
+            <PropertyRef Name="k" />
+          </Key>
+          <Property Name="k" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="picture" Type="image" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="ParksAndLandsModelStoreContainer">
+          <EntitySet Name="buoyTypes" EntityType="Self.buoyTypes" Schema="Camplots" store:Type="Tables" />
+          <EntitySet Name="inspections" EntityType="Self.inspections" Schema="Camplots" store:Type="Tables" />
+          <EntitySet Name="latLon" EntityType="Self.latLon" Schema="Camplots" store:Type="Tables" />
+          <EntitySet Name="mapinfo_prinx" EntityType="Self.mapinfo_prinx" Schema="Camplots" store:Type="Tables" />
+          <EntitySet Name="owners" EntityType="Self.owners" Schema="Camplots" store:Type="Tables" />
+          <EntitySet Name="plumbingInspectors" EntityType="Self.plumbingInspectors" Schema="Camplots" store:Type="Tables" />
+          <EntitySet Name="rents" EntityType="Self.rents" Schema="Camplots" store:Type="Tables" />
+          <EntitySet Name="sites" EntityType="Self.sites" Schema="Camplots" store:Type="Tables" />
+          <EntitySet Name="structures" EntityType="Self.structures" Schema="Camplots" store:Type="Tables" />
+          <EntitySet Name="towns" EntityType="Self.towns" Schema="Camplots" store:Type="Tables" />
+          <EntitySet Name="valuations" EntityType="Self.valuations" Schema="Camplots" store:Type="Tables" />
+          <EntitySet Name="z_photo_test" EntityType="Self.z_photo_test" Schema="Camplots" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ParksAndLandsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="inspections">
+          <Key>
+            <PropertyRef Name="camplot_ID" />
+          </Key>
+          <Property Name="camplot_ID" Type="Int32" Nullable="false" />
+          <Property Name="INSPECTN_DATE" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="INSPECTORS" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="NextDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="latLon">
+          <Key>
+            <PropertyRef Name="Camplot_ID" />
+          </Key>
+          <Property Name="MI_PRINX" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Camplot_ID" Type="Int32" Nullable="false" />
+          <Property Name="LATITUDE" Type="Double" />
+          <Property Name="LONGITUDE" Type="Double" />
+          <Property Name="MIDAS" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="LOTNOS" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="mapinfo_prinx">
+          <Key>
+            <PropertyRef Name="MI_PRINX" />
+          </Key>
+          <Property Name="CAMPLOT_ID" Type="Int32" Nullable="false" />
+          <Property Name="MI_PRINX" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="owners">
+          <Key>
+            <PropertyRef Name="Camplot_ID" />
+          </Key>
+          <Property Name="Camplot_ID" Type="Int32" Nullable="false" />
+          <Property Name="VEND_CUST_CD" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="FSNAME" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="LNAME" Type="String" MaxLength="23" FixedLength="false" Unicode="false" />
+          <Property Name="CONAME" Type="String" MaxLength="65" FixedLength="false" Unicode="false" />
+          <Property Name="AddName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ADDRESS" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="TOWN" Type="String" MaxLength="23" FixedLength="false" Unicode="false" />
+          <Property Name="STATE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="ZIP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="HOME_PHONE" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="CELL_PHONE" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="EMAIL" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+          <Property Name="TRANSFER_DATE" Type="DateTime" Precision="3" />
+          <Property Name="FORMER_OWNER_NOTES" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Seboeis_Dam_Mailing" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="plumbingInspectors">
+          <Key>
+            <PropertyRef Name="contactId" />
+          </Key>
+          <Property Name="contactId" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="title" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="city" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="state" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="zip" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="phone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="addlPhone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="rents">
+          <Key>
+            <PropertyRef Name="Camplot_ID" />
+            <PropertyRef Name="FEEYear" />
+          </Key>
+          <Property Name="Camplot_ID" Type="Int32" Nullable="false" />
+          <Property Name="FEEYear" Type="Int16" Nullable="false" />
+          <Property Name="FEE" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Paid" Type="Boolean" />
+          <Property Name="Partial_Pmt" Type="Boolean" />
+          <Property Name="DatePaid" Type="DateTime" Precision="3" />
+          <Property Name="AmmountPaid" Type="Decimal" Precision="19" Scale="4" />
+        </EntityType>
+        <EntityType Name="sites">
+          <Key>
+            <PropertyRef Name="CAMPLOT_ID" />
+          </Key>
+          <Property Name="CAMPLOT_ID" Type="Int32" Nullable="false" />
+          <Property Name="MIDAS" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="LOTNOS" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="LOCATION" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="WATERBODY" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="CTY" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="ROAD_NAME" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ACCESS" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="FRONTAGE" Type="Double" />
+          <Property Name="DEPTH" Type="Double" />
+          <Property Name="ACREAGE" Type="Double" />
+          <Property Name="CODE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="DRIVEWAY" Type="Boolean" Nullable="false" />
+          <Property Name="PARKING" Type="Boolean" Nullable="false" />
+          <Property Name="PARKING_" Type="Int32" />
+          <Property Name="OWNRS_ASSN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="VEGETATION" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SOIL" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SLOPE_FRONT" Type="Int32" />
+          <Property Name="SLOPE_BACK" Type="Int32" />
+          <Property Name="ENLARGE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LOT_LINES" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="NOTES" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Parks" Type="Boolean" Nullable="false" />
+          <Property Name="Comercial" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RevSharing" Type="Boolean" Nullable="false" />
+          <Property Name="Archive" Type="Boolean" Nullable="false" />
+          <Property Name="ArchiveDate" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="LeaseEndDate" Type="DateTime" Precision="3" />
+          <Property Name="CommercialSpecialNotes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Map" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Plan" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Lot" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CustomerNumber" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="WasteWaterSystemStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Cancelled" Type="Boolean" Nullable="false" />
+          <Property Name="INSPECTN_DATE" Type="DateTime" Precision="3" />
+          <Property Name="INSPECTORS" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="LATITUDE" Type="Double" />
+          <Property Name="LONGITUDE" Type="Double" />
+          <Property Name="NextDate" Type="DateTime" Precision="3" />
+          <Property Name="VEND_CUST_CD" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="FSNAME" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="LNAME" Type="String" MaxLength="23" FixedLength="false" Unicode="false" />
+          <Property Name="CONAME" Type="String" MaxLength="65" FixedLength="false" Unicode="false" />
+          <Property Name="AddName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ADDRESS" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="TOWN" Type="String" MaxLength="23" FixedLength="false" Unicode="false" />
+          <Property Name="STATE" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="ZIP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="HOME_PHONE" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="CELL_PHONE" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="EMAIL" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+          <Property Name="TRANSFER_DATE" Type="DateTime" Precision="3" />
+          <Property Name="FORMER_OWNER_NOTES" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Seboeis_Dam_Mailing" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="structures">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="Camplot_ID" Type="Int32" />
+          <Property Name="STRUCTURE_DESC" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="CONDITION" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="ROOF_TYPE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="SIDING" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="FOUNDATION" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="FOUND_CONDITION" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="WATER_DISTANCE" Type="Double" />
+          <Property Name="TOILET_TYPE" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="LOCATION" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="T_WTR_DISTANCE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="T_CONDITION" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="GREY_WATER" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+          <Property Name="VENT_PIPES" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="SEPTIC_FIELD" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="G_WTR_DISTANCE" Type="Double" />
+          <Property Name="G_CONDITION" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="G_COMPLIANCE" Type="Boolean" />
+          <Property Name="GARBAGE_DISPOSAL" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="WATER_SUPPLY" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="PIPED_WATER" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="HEATING" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="STOVE_PIPES" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="SCREENED" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="COOKING" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="LIGHTING" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="AC_ELECTRIC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TELEPHONE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AUX_STRUCT" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="AUX_DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DOCK" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="DOCK_DESC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="COMMENTS" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PHOTO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ShoreLand" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="towns">
+          <Key>
+            <PropertyRef Name="Midas" />
+          </Key>
+          <Property Name="Midas" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Town_name2" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="LANDSREGION" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="SpecialBilling" Type="Boolean" />
+          <Property Name="SpecialAmount" Type="Int32" />
+          <Property Name="RevSharing_Stumpage" Type="Double" />
+          <Property Name="RevShare_Camplot" Type="Double" />
+          <Property Name="region" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="plumbingInspectorId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="valuations">
+          <Key>
+            <PropertyRef Name="camplot_ID" />
+            <PropertyRef Name="VALUATIONYEAR" />
+          </Key>
+          <Property Name="camplot_ID" Type="Int32" Nullable="false" />
+          <Property Name="VALUATIONYEAR" Type="Int16" Nullable="false" />
+          <Property Name="VALUATION" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+        </EntityType>
+        <EntityType Name="z_photo_test">
+          <Key>
+            <PropertyRef Name="k" />
+          </Key>
+          <Property Name="k" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="picture" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="inspections" EntityType="Self.inspections" />
+          <EntitySet Name="latLon" EntityType="Self.latLon" />
+          <EntitySet Name="mapinfo_prinx" EntityType="Self.mapinfo_prinx" />
+          <EntitySet Name="owners" EntityType="Self.owners" />
+          <EntitySet Name="plumbingInspectors" EntityType="Self.plumbingInspectors" />
+          <EntitySet Name="rents" EntityType="Self.rents" />
+          <EntitySet Name="sites" EntityType="Self.sites" />
+          <EntitySet Name="structures" EntityType="Self.structures" />
+          <EntitySet Name="towns" EntityType="Self.towns" />
+          <EntitySet Name="valuations" EntityType="Self.valuations" />
+          <EntitySet Name="z_photo_test" EntityType="Self.z_photo_test" />
+          <EntitySet Name="buoyTypes" EntityType="ParksAndLandsModel.buoyTypes" />
+        </EntityContainer>
+        <EntityType Name="buoyTypes">
+          <Key>
+            <PropertyRef Name="buoyTypeName" />
+          </Key>
+          <Property Name="buoyTypeName" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="buoyTypeDescr" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="buoyTypeImage" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ParksAndLandsModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="inspections">
+            <EntityTypeMapping TypeName="ParksAndLandsModel.inspections">
+              <MappingFragment StoreEntitySet="inspections">
+                <ScalarProperty Name="camplot_ID" ColumnName="camplot ID" />
+                <ScalarProperty Name="INSPECTN_DATE" ColumnName="INSPECTN DATE" />
+                <ScalarProperty Name="INSPECTORS" ColumnName="INSPECTORS" />
+                <ScalarProperty Name="NextDate" ColumnName="NextDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="latLon">
+            <EntityTypeMapping TypeName="ParksAndLandsModel.latLon">
+              <MappingFragment StoreEntitySet="latLon">
+                <ScalarProperty Name="MI_PRINX" ColumnName="MI_PRINX" />
+                <ScalarProperty Name="Camplot_ID" ColumnName="Camplot_ID" />
+                <ScalarProperty Name="LATITUDE" ColumnName="LATITUDE" />
+                <ScalarProperty Name="LONGITUDE" ColumnName="LONGITUDE" />
+                <ScalarProperty Name="MIDAS" ColumnName="MIDAS" />
+                <ScalarProperty Name="LOTNOS" ColumnName="LOTNOS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mapinfo_prinx">
+            <EntityTypeMapping TypeName="ParksAndLandsModel.mapinfo_prinx">
+              <MappingFragment StoreEntitySet="mapinfo_prinx">
+                <ScalarProperty Name="CAMPLOT_ID" ColumnName="CAMPLOT_ID" />
+                <ScalarProperty Name="MI_PRINX" ColumnName="MI_PRINX" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="owners">
+            <EntityTypeMapping TypeName="ParksAndLandsModel.owners">
+              <MappingFragment StoreEntitySet="owners">
+                <ScalarProperty Name="Camplot_ID" ColumnName="Camplot ID" />
+                <ScalarProperty Name="VEND_CUST_CD" ColumnName="VEND_CUST_CD" />
+                <ScalarProperty Name="FSNAME" ColumnName="FSNAME" />
+                <ScalarProperty Name="LNAME" ColumnName="LNAME" />
+                <ScalarProperty Name="CONAME" ColumnName="CONAME" />
+                <ScalarProperty Name="AddName" ColumnName="AddName" />
+                <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+                <ScalarProperty Name="TOWN" ColumnName="TOWN" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+                <ScalarProperty Name="ZIP" ColumnName="ZIP" />
+                <ScalarProperty Name="HOME_PHONE" ColumnName="HOME PHONE" />
+                <ScalarProperty Name="CELL_PHONE" ColumnName="CELL PHONE" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="TRANSFER_DATE" ColumnName="TRANSFER DATE" />
+                <ScalarProperty Name="FORMER_OWNER_NOTES" ColumnName="FORMER OWNER/NOTES" />
+                <ScalarProperty Name="Seboeis_Dam_Mailing" ColumnName="Seboeis Dam Mailing" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="plumbingInspectors">
+            <EntityTypeMapping TypeName="ParksAndLandsModel.plumbingInspectors">
+              <MappingFragment StoreEntitySet="plumbingInspectors">
+                <ScalarProperty Name="contactId" ColumnName="contactId" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="state" ColumnName="state" />
+                <ScalarProperty Name="zip" ColumnName="zip" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="addlPhone" ColumnName="addlPhone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rents">
+            <EntityTypeMapping TypeName="ParksAndLandsModel.rents">
+              <MappingFragment StoreEntitySet="rents">
+                <ScalarProperty Name="Camplot_ID" ColumnName="Camplot ID" />
+                <ScalarProperty Name="FEEYear" ColumnName="FEEYear" />
+                <ScalarProperty Name="FEE" ColumnName="FEE" />
+                <ScalarProperty Name="Paid" ColumnName="Paid" />
+                <ScalarProperty Name="Partial_Pmt" ColumnName="Partial Pmt" />
+                <ScalarProperty Name="DatePaid" ColumnName="DatePaid" />
+                <ScalarProperty Name="AmmountPaid" ColumnName="AmmountPaid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sites">
+            <EntityTypeMapping TypeName="ParksAndLandsModel.sites">
+              <MappingFragment StoreEntitySet="sites">
+                <ScalarProperty Name="CAMPLOT_ID" ColumnName="CAMPLOT_ID" />
+                <ScalarProperty Name="MIDAS" ColumnName="MIDAS" />
+                <ScalarProperty Name="LOTNOS" ColumnName="LOTNOS" />
+                <ScalarProperty Name="LOCATION" ColumnName="LOCATION" />
+                <ScalarProperty Name="WATERBODY" ColumnName="WATERBODY" />
+                <ScalarProperty Name="CTY" ColumnName="CTY" />
+                <ScalarProperty Name="ROAD_NAME" ColumnName="ROAD_NAME" />
+                <ScalarProperty Name="ACCESS" ColumnName="ACCESS" />
+                <ScalarProperty Name="FRONTAGE" ColumnName="FRONTAGE" />
+                <ScalarProperty Name="DEPTH" ColumnName="DEPTH" />
+                <ScalarProperty Name="ACREAGE" ColumnName="ACREAGE" />
+                <ScalarProperty Name="CODE" ColumnName="CODE" />
+                <ScalarProperty Name="DRIVEWAY" ColumnName="DRIVEWAY" />
+                <ScalarProperty Name="PARKING" ColumnName="PARKING" />
+                <ScalarProperty Name="PARKING_" ColumnName="PARKING#" />
+                <ScalarProperty Name="OWNRS_ASSN" ColumnName="OWNRS_ASSN" />
+                <ScalarProperty Name="VEGETATION" ColumnName="VEGETATION" />
+                <ScalarProperty Name="SOIL" ColumnName="SOIL" />
+                <ScalarProperty Name="SLOPE_FRONT" ColumnName="SLOPE_FRONT" />
+                <ScalarProperty Name="SLOPE_BACK" ColumnName="SLOPE_BACK" />
+                <ScalarProperty Name="ENLARGE" ColumnName="ENLARGE" />
+                <ScalarProperty Name="LOT_LINES" ColumnName="LOT_LINES" />
+                <ScalarProperty Name="NOTES" ColumnName="NOTES" />
+                <ScalarProperty Name="Parks" ColumnName="Parks" />
+                <ScalarProperty Name="Comercial" ColumnName="Comercial" />
+                <ScalarProperty Name="RevSharing" ColumnName="RevSharing" />
+                <ScalarProperty Name="Archive" ColumnName="Archive" />
+                <ScalarProperty Name="ArchiveDate" ColumnName="ArchiveDate" />
+                <ScalarProperty Name="LeaseEndDate" ColumnName="LeaseEndDate" />
+                <ScalarProperty Name="CommercialSpecialNotes" ColumnName="CommercialSpecialNotes" />
+                <ScalarProperty Name="Map" ColumnName="Map" />
+                <ScalarProperty Name="Plan" ColumnName="Plan" />
+                <ScalarProperty Name="Lot" ColumnName="Lot" />
+                <ScalarProperty Name="CustomerNumber" ColumnName="CustomerNumber" />
+                <ScalarProperty Name="WasteWaterSystemStatus" ColumnName="WasteWaterSystemStatus" />
+                <ScalarProperty Name="Cancelled" ColumnName="Cancelled" />
+                <ScalarProperty Name="INSPECTN_DATE" ColumnName="INSPECTN DATE" />
+                <ScalarProperty Name="INSPECTORS" ColumnName="INSPECTORS" />
+                <ScalarProperty Name="LATITUDE" ColumnName="LATITUDE" />
+                <ScalarProperty Name="LONGITUDE" ColumnName="LONGITUDE" />
+                <ScalarProperty Name="NextDate" ColumnName="NextDate" />
+                <ScalarProperty Name="VEND_CUST_CD" ColumnName="VEND_CUST_CD" />
+                <ScalarProperty Name="FSNAME" ColumnName="FSNAME" />
+                <ScalarProperty Name="LNAME" ColumnName="LNAME" />
+                <ScalarProperty Name="CONAME" ColumnName="CONAME" />
+                <ScalarProperty Name="AddName" ColumnName="AddName" />
+                <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+                <ScalarProperty Name="TOWN" ColumnName="TOWN" />
+                <ScalarProperty Name="STATE" ColumnName="STATE" />
+                <ScalarProperty Name="ZIP" ColumnName="ZIP" />
+                <ScalarProperty Name="HOME_PHONE" ColumnName="HOME PHONE" />
+                <ScalarProperty Name="CELL_PHONE" ColumnName="CELL PHONE" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="TRANSFER_DATE" ColumnName="TRANSFER DATE" />
+                <ScalarProperty Name="FORMER_OWNER_NOTES" ColumnName="FORMER OWNER/NOTES" />
+                <ScalarProperty Name="Seboeis_Dam_Mailing" ColumnName="Seboeis Dam Mailing" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="structures">
+            <EntityTypeMapping TypeName="ParksAndLandsModel.structures">
+              <MappingFragment StoreEntitySet="structures">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Camplot_ID" ColumnName="Camplot ID" />
+                <ScalarProperty Name="STRUCTURE_DESC" ColumnName="STRUCTURE DESC" />
+                <ScalarProperty Name="CONDITION" ColumnName="CONDITION" />
+                <ScalarProperty Name="ROOF_TYPE" ColumnName="ROOF TYPE" />
+                <ScalarProperty Name="SIDING" ColumnName="SIDING" />
+                <ScalarProperty Name="FOUNDATION" ColumnName="FOUNDATION" />
+                <ScalarProperty Name="FOUND_CONDITION" ColumnName="FOUND CONDITION" />
+                <ScalarProperty Name="WATER_DISTANCE" ColumnName="WATER DISTANCE" />
+                <ScalarProperty Name="TOILET_TYPE" ColumnName="TOILET TYPE" />
+                <ScalarProperty Name="LOCATION" ColumnName="LOCATION" />
+                <ScalarProperty Name="T_WTR_DISTANCE" ColumnName="T-WTR DISTANCE" />
+                <ScalarProperty Name="T_CONDITION" ColumnName="T CONDITION" />
+                <ScalarProperty Name="GREY_WATER" ColumnName="GREY WATER" />
+                <ScalarProperty Name="VENT_PIPES" ColumnName="VENT PIPES" />
+                <ScalarProperty Name="SEPTIC_FIELD" ColumnName="SEPTIC FIELD" />
+                <ScalarProperty Name="G_WTR_DISTANCE" ColumnName="G-WTR DISTANCE" />
+                <ScalarProperty Name="G_CONDITION" ColumnName="G CONDITION" />
+                <ScalarProperty Name="G_COMPLIANCE" ColumnName="G COMPLIANCE" />
+                <ScalarProperty Name="GARBAGE_DISPOSAL" ColumnName="GARBAGE DISPOSAL" />
+                <ScalarProperty Name="WATER_SUPPLY" ColumnName="WATER SUPPLY" />
+                <ScalarProperty Name="PIPED_WATER" ColumnName="PIPED WATER" />
+                <ScalarProperty Name="HEATING" ColumnName="HEATING" />
+                <ScalarProperty Name="STOVE_PIPES" ColumnName="STOVE PIPES" />
+                <ScalarProperty Name="SCREENED" ColumnName="SCREENED" />
+                <ScalarProperty Name="COOKING" ColumnName="COOKING" />
+                <ScalarProperty Name="LIGHTING" ColumnName="LIGHTING" />
+                <ScalarProperty Name="AC_ELECTRIC" ColumnName="AC ELECTRIC" />
+                <ScalarProperty Name="TELEPHONE" ColumnName="TELEPHONE" />
+                <ScalarProperty Name="AUX_STRUCT" ColumnName="AUX STRUCT" />
+                <ScalarProperty Name="AUX_DESC" ColumnName="AUX DESC" />
+                <ScalarProperty Name="DOCK" ColumnName="DOCK" />
+                <ScalarProperty Name="DOCK_DESC" ColumnName="DOCK DESC" />
+                <ScalarProperty Name="COMMENTS" ColumnName="COMMENTS" />
+                <ScalarProperty Name="PHOTO" ColumnName="PHOTO" />
+                <ScalarProperty Name="ShoreLand" ColumnName="ShoreLand" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="towns">
+            <EntityTypeMapping TypeName="ParksAndLandsModel.towns">
+              <MappingFragment StoreEntitySet="towns">
+                <ScalarProperty Name="Midas" ColumnName="Midas" />
+                <ScalarProperty Name="Town_name2" ColumnName="Town-name2" />
+                <ScalarProperty Name="LANDSREGION" ColumnName="LANDSREGION" />
+                <ScalarProperty Name="SpecialBilling" ColumnName="SpecialBilling" />
+                <ScalarProperty Name="SpecialAmount" ColumnName="SpecialAmount" />
+                <ScalarProperty Name="RevSharing_Stumpage" ColumnName="RevSharing_Stumpage" />
+                <ScalarProperty Name="RevShare_Camplot" ColumnName="RevShare_Camplot" />
+                <ScalarProperty Name="region" ColumnName="region" />
+                <ScalarProperty Name="plumbingInspectorId" ColumnName="plumbingInspectorId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="valuations">
+            <EntityTypeMapping TypeName="ParksAndLandsModel.valuations">
+              <MappingFragment StoreEntitySet="valuations">
+                <ScalarProperty Name="camplot_ID" ColumnName="camplot ID" />
+                <ScalarProperty Name="VALUATIONYEAR" ColumnName="VALUATIONYEAR" />
+                <ScalarProperty Name="VALUATION" ColumnName="VALUATION" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="z_photo_test">
+            <EntityTypeMapping TypeName="ParksAndLandsModel.z_photo_test">
+              <MappingFragment StoreEntitySet="z_photo_test">
+                <ScalarProperty Name="k" ColumnName="k" />
+                <ScalarProperty Name="picture" ColumnName="picture" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="buoyTypes">
+            <EntityTypeMapping TypeName="ParksAndLandsModel.buoyTypes">
+              <MappingFragment StoreEntitySet="buoyTypes">
+                <ScalarProperty Name="buoyTypeImage" ColumnName="buoyTypeImage" />
+                <ScalarProperty Name="buoyTypeDescr" ColumnName="buoyTypeDescr" />
+                <ScalarProperty Name="buoyTypeName" ColumnName="buoyTypeName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

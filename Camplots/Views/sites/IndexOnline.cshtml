@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Camplots.ViewModels.Sites>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <ul class="errorMessages text-danger"></ul>
+    </div>
+</div>
+
+<h2>Displays a list of sites and locations from the server</h2>
+
+
+<p>
+    @Html.ActionLink("Create New", "Edit")
+</p>
+<table class="table" id="sitesTable">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CAMPLOT_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LOCATION)
+        </th>
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CAMPLOT_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LOCATION)
+            </td>
+
+        </tr>
+    }
+
+</table>
+
+<div>
+    @Html.ActionLink("Back to menu", "Menu")
+</div>
+
+<script type="text/javascript" src="~/Scripts/App/SitesIndexOnline.js"></script>
