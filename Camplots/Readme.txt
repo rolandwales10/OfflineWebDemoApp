@@ -42,3 +42,8 @@ Instructions for using the demo:
 	7) Go back to the menu.
 	8) Click "check back into the server", then upload.
 	9) Return to the menu and click "validate results on the server".  You should see the sites with any changes you made offline.
+
+Running the app offline:
+	If you are familiar with MVC request routing, you know that you can enter the root URL for the application, and MVC will add
+	/Home/Index for the default controller and action.  When you run offline, there is no routing.  Be sure to include the 
+	/Home/Index at the end of the URL when running the application offline.	
